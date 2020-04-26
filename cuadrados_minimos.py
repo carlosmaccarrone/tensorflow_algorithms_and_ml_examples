@@ -50,7 +50,9 @@ imagen_recta = []
 for i in range(-1,7):
     imagen_recta.append(final_a*i+final_b)
 
-plt.plot(x_vals, y_vals, 'ro', label='puntos') 
+plt.plot(x_vals, y_vals, 'ro', label='puntos', alpha=0.8) 
+for (x, y) in zip(x_vals, y_vals):
+    plt.text(x-0.2, y-0.2, '({};{})'.format(x, y))
 plt.plot(range(-1,7), imagen_recta, label='recta') 
 plt.suptitle('Recta que mejor ajusta', fontsize=18) 
 plt.xlabel("Eje x")
@@ -58,4 +60,5 @@ plt.ylabel("Eje y")
 plt.legend(borderpad=1) 
 plt.xlim([-1, 6])
 plt.ylim([-1, 3])
+plt.grid()
 plt.show()
