@@ -35,8 +35,8 @@ init = tf.global_variables_initializer()
 session.run(init)
 
 for epoch in range(1000):
-	for (_x, _y) in zip(x_vals, y_vals): 
-		session.run( optimizador, feed_dict={x_data: [_x], y_data: [_y]} )
+	for (x, y) in zip(x_vals, y_vals): 
+		session.run( optimizador, feed_dict={x_data: [x], y_data: [y]} )
 
 	# print( "a="+str(session.run(a))+", b="+str(session.run(b)) )
 
