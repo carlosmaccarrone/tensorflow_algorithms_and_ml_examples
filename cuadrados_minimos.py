@@ -43,6 +43,9 @@ for epoch in range(1000):
 final_a = session.run(a)
 final_b = session.run(b)
 
+# Los valores finales no representan la mejor recta posible pero sí es una sucesión convergente.
+print("\nEcuación de la recta: y="+str(np.round(final_a,1)[0])+"x+"+str(np.round(final_b,1)[0])+"\n")
+
 imagen_recta = []
 for i in range(-1,7):
     imagen_recta.append(final_a*i+final_b)
@@ -56,5 +59,3 @@ plt.legend("lower right")
 plt.xlim([-1, 6])
 plt.ylim([-1, 3])
 plt.show()
-
-
