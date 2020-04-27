@@ -66,7 +66,7 @@ train_prec = session.run(precision, feed_dict={eje_x: [x_vals], eje_y: [y_vals],
 test_prec = session.run(precision, feed_dict={eje_x: [x_vals_test], eje_y: [y_vals_test], n: len(x_vals_test)})
 
 print("Precisión en entrenamiento: "+str(train_prec*100)+"%")
-print("Precisión en entrenamiento: "+str(test_prec*100)+"%")
+print("Precisión en testeo: "+str(test_prec*100)+"%")
 
 # Ploteo del training
 imagen_recta = []
