@@ -26,8 +26,7 @@ b = tf.Variable(tf.random_normal(shape=[1]))
 producto = tf.multiply(a,x_data)
 suma = tf.add(producto,b)
 
-error = tf.square(suma-y_data) / (2*len(x_vals)) #el error hace la diferencia
-# error = tf.square(suma-y_data)
+error = tf.square(suma-y_data) / (2*len(x_vals)) # error cuadrático medio
 
 optimizador = tf.train.GradientDescentOptimizer(learning_rate=0.025).minimize(error)
 
