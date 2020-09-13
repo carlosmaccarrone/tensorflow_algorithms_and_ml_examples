@@ -51,7 +51,7 @@ model_training()
 pend = pendiente.numpy()
 ordOrigen = ordenadaAlOrigen.numpy()
 calculoSignado = lambda x, y: np.sign(np.add(np.matmul([x,y], pend), ordOrigen)).flatten()
-predicciones = [ calculoSignado(x, y)[0] for x, y in x_y_vals_test ]
+predicciones = [ calculoSignado(x, y) for x, y in x_y_vals_test ]
 precision = np.mean(np.array(np.equal(predicciones, z_vals_test), dtype=np.float32))
 print("\nPrecición de la prueba de clasificación: {}%".format(str(precision*100)))
 
