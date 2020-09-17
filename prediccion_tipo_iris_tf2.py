@@ -11,8 +11,6 @@ batch_size = 30
 ######################################
 from sklearn import datasets
 iris = datasets.load_iris()
-# iris.filename = C:\repoPython\venv\lib\site-packages\sklearn\datasets\data\iris.csv
-# ésta manera de inicializarlos no funciona desde csv
 
 setosa = np.array([ data for idx, data in enumerate(iris.data) if idx <= 49])
 versicolor = np.array([ data for idx, data in enumerate(iris.data) if idx > 49 and idx <= 99])
