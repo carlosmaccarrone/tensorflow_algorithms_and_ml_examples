@@ -43,6 +43,11 @@ pendiente = tf.Variable(tf.random.normal(shape=[x_y_columns, 1]))
 ordenadaAlOrigen = tf.Variable(tf.random.normal(shape=[1]))
 model_training()
 
+# otra manera de resolver el problema de optimización con los mismos resultados:
+# regularization_loss = tf.divide(tf.square(tf.norm(pendiente, ord=2)), 2)
+# hinge_loss = tf.reduce_sum(tf.minimum(0., tf.subtract(tf.multiply(imagenZ, output), 1.)))
+# svm_loss = tf.subtract(tf.reduce_sum(regularization_loss), tf.multiply(1., hinge_loss))
+
 # # ######## TESTEO ##
 # # ##################
 pend = pendiente.numpy()
