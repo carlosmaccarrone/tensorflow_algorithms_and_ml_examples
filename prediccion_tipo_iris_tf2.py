@@ -80,7 +80,6 @@ print("\nHay un porcentaje de probabilidades de que una flor de iris dada según
 	   a una especie lo normal es que la probabilidad sea una de tres o 33%\
 	   de probabilidades que pertenesca a una especie y no a las otras dos")
 print("Probabilidad: {}".format(probabilidad))
-
 contents = np.c_[predicciones, label_values]
 precision = np.mean(np.array([ dat[0] == dat[1] for dat in contents ], dtype=np.float32))
 print("Presición del algoritmo: ", precision)
