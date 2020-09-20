@@ -86,12 +86,12 @@ print("\nPrecisión: {}".format(str(precision*100)))
 # # ######## PLOTEO ##
 # # ##################
 if plotear:
-	min_x, min_y = np.amin(x_y_all_values,0)-2
-	max_x, max_y = np.amax(x_y_all_values,0)+2
+	min_x, min_y = np.amin(x_y_all_values,0)-1
+	max_x, max_y = np.amax(x_y_all_values,0)+1
 
 	pointAmount = 300
-	termx = np.linspace(min_x, max_x, pointAmount)-1
-	termy = np.linspace(min_y, max_y, pointAmount)+1
+	termx = np.linspace(min_x, max_x, pointAmount)
+	termy = np.linspace(min_y, max_y, pointAmount)
 
 	xs, ys = np.meshgrid(termx, termy)
 
@@ -118,8 +118,6 @@ if plotear:
 	plt.grid(True)
 	plt.xlabel('Eje X')
 	plt.ylabel('Eje Y')
-	plt.xlim([-0.5, 3.5])
-	plt.ylim([-0.5, 3.5])
 
 	plt.show()
 
